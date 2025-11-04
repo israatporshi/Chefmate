@@ -1,109 +1,109 @@
-# 🍳 ChefMate — Your Smart AI Recipe Assistant  
+# 🍳 **ChefMate — Your Smart AI Recipe Assistant**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-Framework-lightgrey?logo=flask)
-![spaCy](https://img.shields.io/badge/spaCy-NLP-green?logo=spacy)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Status](https://img.shields.io/badge/Status-Active-success)
-![Platform](https://img.shields.io/badge/Platform-Web-orange)
-
----
-
-**ChefMate** is an AI-powered recipe web application built with **Flask**, designed to help users discover the perfect dish from whatever ingredients they have at home.  
-It combines **NLP (spaCy)**, **fuzzy matching**, and **machine learning** to normalize ingredients, predict cuisines, and even suggest recipe names — all wrapped in a beautiful, user-friendly interface.
+ChefMate is an **AI-powered recipe recommendation web application** built with **Python Flask**.  
+It helps users discover the perfect dish from ingredients they already have at home.  
+Using **Natural Language Processing (spaCy)**, **Fuzzy Matching**, and **Machine Learning**,  
+ChefMate can normalize ingredients, handle typos, and predict the most suitable recipes and cuisines —  
+all through a clean, user-friendly interface.
 
 ---
 
-## 🚀 Features  
+## 🚀 **Features**
 
-### 🧠 AI & NLP Intelligence  
-- **Ingredient Normalization:** Uses **spaCy** lemmatization and synonym handling to understand ingredient variations (e.g., *“tomatoes” → “tomato”*).  
-- **Fuzzy Matching:** Smartly matches ingredients even with typos or variations.  
-- **Ingredient Categorization (Planned):** Classify ingredients by type (spices, dairy, etc.) for smarter suggestions.  
+### 🧠 **AI & NLP Intelligence**
+- 🥫 **Ingredient Normalization:** Understands ingredient variations (e.g., _tomatoes → tomato_) using spaCy.
+- ✏️ **Fuzzy Matching:** Suggests recipes even with spelling mistakes or slight variations.
+- 🧂 **Ingredient Categorization (Planned):** Group ingredients by type (spices, dairy, etc.) for smarter results.
 
-### 🤖 Machine Learning Predictions  
-- Predict **recipe names** and **cuisines** from ingredient lists using a Kaggle dataset (~643 MB).  
-- The ML model learns flavor patterns and relationships between cuisines.  
+### 🤖 **Machine Learning Predictions**
+- 🔍 Predicts **recipe names** and **cuisines** based on ingredient combinations.
+- 📊 Trained with a **Kaggle dataset (~643 MB)** for flavor and cuisine pattern analysis.
 
-### 💡 Smart User Experience  
-Clean and responsive Flask frontend.  
+### 💡 **Smart User Experience**
+- 🧭 Clean, responsive **Flask frontend**.
+- 🎛️ Dropdown filters for:
+  - 🥗 Cuisine  
+  - 🥦 Diet Type  
+  - 🍛 Meal Type  
+- ⚡ Displays **matching score** with each recipe for transparency.
 
-Dropdown filters for:  
-- 🥗 **Cuisine**  
-- 🥦 **Diet type**  
-- 🍛 **Meal type**  
-
-Fast recipe results with a matching score display.  
-
-### 🔮 Upcoming “Later Upgrades”  
-- 🔍 Search bar with live filtering  
-- 🌎 Filter by cuisine & difficulty  
+### 🔮 **Future Upgrades**
+- 🔍 Live search bar  
+- 🌎 Filter by difficulty level  
 - ❤️ Save favorite recipes  
-- ⭐ Add ratings and comments  
-- 🛒 Export smart shopping list  
+- ⭐ Add ratings & comments  
+- 🛒 Smart shopping list export  
 
 ---
 
-## 🏗️ Tech Stack  
+## 🏗️ **Tech Stack**
 
 | Category | Technology |
 |-----------|-------------|
-| **Backend** | Flask (Python) |
-| **Frontend** | HTML5, CSS3, JavaScript |
-| **AI/NLP** | spaCy, FuzzyWuzzy |
-| **ML (Future)** | Scikit-learn, Pandas, NumPy |
-| **Dataset** | Kaggle recipe dataset (ingredients, steps, tags) |
-| **Environment** | Virtualenv / Conda |
+| 🖥️ Backend | Flask (Python) |
+| 🎨 Frontend | HTML5, CSS3, JavaScript |
+| 🧠 AI/NLP | spaCy, FuzzyWuzzy |
+| 🤖 Machine Learning | Scikit-learn, Pandas, NumPy (planned) |
+| 📂 Dataset | Kaggle Recipe Dataset |
+| ⚙️ Environment | Virtualenv / Conda |
 
 ---
 
-## ⚙️ Installation & Setup  
+## ⚙️ **Installation & Setup**
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/<your-username>/ChefMate.git
-   cd ChefMate
-2. Create & activate virtual environment
+Follow these steps to run **ChefMate** locally 👇  
+### 1️⃣ **Clone the Repository**
+### 2️⃣ **Create and Activate Virtual Environment**
 
+#### 🪟 **For Windows:**
 python -m venv venv
-source venv/bin/activate      # macOS/Linux
-venv\Scripts\activate         # Windows
+venv\Scripts\activate
+🍎 For macOS/Linux:
+bash
+Copy code
+python3 -m venv venv
+source venv/bin/activate
 
-
-3. Install dependencies
-
+3️⃣ Install Dependencies
+bash
+Copy code
 pip install -r requirements.txt
 
-
-4. Run the Flask app
-
+4️⃣ Run the Flask App
+bash
+Copy code
 python app.py
 
-
-5. Visit locally
-
-http://127.0.0.1:5000/
-
-🧩 Project Structure
-ChefMate/
-│
-├── app.py                 # Main Flask app
-├── utils.py               # NLP + Matching utilities
-├── static/                # CSS, JS, images
-├── templates/             # HTML templates
-├── models/                # ML model files (planned)
-├── data/                  # Dataset files
-├── requirements.txt
-└── README.md
+5️⃣ Open in Browser
+Visit 👉 http://127.0.0.1:5000/
 
 🧠 How It Works
 
-User enters ingredients.
+🥕 User enters ingredients.
 
-spaCy normalizes input (lemmatization + synonym handling).
+🧩 spaCy performs lemmatization & synonym handling.
 
-Fuzzy matching compares against the dataset ingredients.
+🔎 Fuzzy Matching compares ingredients against the dataset.
 
-Matching recipes are displayed with confidence scores.
+🍲 Displays best-matched recipes with confidence scores.
 
-(Future) The ML model predicts likely cuisine and recipe name.
+🤖 (Future) Machine Learning model predicts cuisine & recipe name.
+
+🧩 Project Structure
+csharp
+Copy code
+ChefMate/
+│
+├── app.py              # Main Flask app
+├── utils.py            # NLP + Matching utilities
+├── static/             # CSS, JS, Images
+├── templates/          # HTML templates
+├── models/             # ML model files (planned)
+├── data/               # Dataset files
+├── requirements.txt    # Dependencies
+└── README.md
+
+👩‍💻 Author
+Israt Jerin Porshi
+📧 ij.porshi@gmail.com
+🌐 GitHub Profile : https://github.com/israatporshi
